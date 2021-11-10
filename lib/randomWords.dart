@@ -14,7 +14,15 @@ class _RandomWordsState extends State<RandomWords> {
   final _saved = <WordPair>{};
   @override
   Widget build(BuildContext context) {
-    return _buildSuggestions();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Startup Name Generator'),
+        actions: [
+          IconButton(onPressed: _pushSaved, icon: const Icon(Icons.list))
+        ],
+      ),
+      body: _buildSuggestions(),
+    );
   }
 
   Widget _buildSuggestions() {
@@ -54,4 +62,6 @@ class _RandomWordsState extends State<RandomWords> {
       },
     );
   }
+
+  void _pushSaved() {}
 }

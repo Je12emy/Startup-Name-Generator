@@ -11,12 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.deepPurple),
       title: "Startup Name Generator",
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
-        ),
-        body: Center(child: RandomWords()),
-      ),
+      home: RandomWords(),
     );
   }
 }
